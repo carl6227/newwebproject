@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <table id="mytable">
+        <tr>
+            <th>id</th>
+            <th>Firstname </th>
+            <th>Lastname</th>
+        </tr>
+    </table>
+<button id="myBtn" onclick="myfunction()">add row</button>
+    </table>
+
+
+    <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select> 
+      <button onclick="cntDsp()">count and display</button>
+       <button onclick="createNew()">create new element </button>
+    <script>
+// function myfunction(){
+// var table=document.getElementById("mytable");
+// // var row= table.insertRow();
+// // row.insertCell(0);
+// // row.insertCell(1);
+// // row.insertCell(2);
+// }
+
+// function cntDsp(){
+// var list=document.getElementsByTagName("option");
+// var listText=[""];
+// var count=0;
+// for(let i=0;i<list.length;i++){
+//     listText.push(list[i].innerHTML);
+//     count++
+// }
+// alert("There are "+count+" cars namely "+listText);
+// }
+
+// function createNew(){
+// function newElement(element,id,text){
+// element=document.createElement("h1");
+// id=element.setAttribute("id","newID");
+// text=element.innerText="this a new element";
+// return element;
+// return id;
+
+// }
+
+// document.body.appendChild(newElement());
+// }
+    </script>
+</body>
+</html>
