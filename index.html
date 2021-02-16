@@ -1,80 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-        
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-        </style>
+    <title>index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
 </head>
+
 <body>
-    <table id="mytable">
-        <tr>
-            <th>id</th>
-            <th>Firstname </th>
-            <th>Lastname</th>
-        </tr>
-    </table>
-<button id="myBtn" onclick="myfunction()">add row</button>
-    </table>
+    <div class="container">
+        <h1 class="ml16" id="text">Patrick Carl Glinogo</h1>
+        <h4 class="text2">Created by</h4>
+        <img src="https://wallpapermemory.com/uploads/729/black-bullet-wallpaper-ultra-hd-4k-342401.jpg" style="width: 1110px;height: 500px;" alt="">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Exercise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Moderate Exercise</a>
+            </li>
+
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="jumbotron">
+                    <h1 class="display-4">Exercises:</h1>
+                    <p>1.Write a Javascript program wherein you add rows to an existing table in HTML every time you click a button. </p>
+                    <p>2.Write a JavaScript program to count and display the items of adropdown list, in an alert window.</p>
+                    <p>3.Write a Javascript function where you take 3 parameters. These parameters would represent the element you want to create. You have the parameters id, element, and, text. Parameter id would represent the id of the element created,
+                        element would represent the element you are creating (p, button, h1, etc.), and text being the text displayed in the element created. The said element would then be added to the body.</p>
+                    <hr class="my-4">
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Exercise#1</a>
+                                <a class="nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Exercise#2</a>
+                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Exercise#3</a>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                    <table id="mytable">
+                                        <tr class="table-primary">
+                                            <th>id</th>
+                                            <th>Firstname </th>
+                                            <th>Lastname</th>
+                                        </tr>
+                                    </table>
+                                    <button onclick=" myfunction() " class="btn btn-info">add row</button>
+                                </div>
+                                <div class="tab-pane fade " id="v-pills-profile" role="tabpanel " aria-labelledby="v-pills-profile-tab ">
+                                    <select id="cars " name="cars ">
+                                <option value="volvo ">Volvo</option>
+                                <option value="saab ">Saab</option>
+                                <option value="fiat ">Fiat</option>
+                                <option value="audi ">Audi</option>
+                                </select>
+                                    <button onclick="cntDsp() " class="btn btn-info">count and display</button>
+                                </div>
+                                <div class="tab-pane fade " id="v-pills-messages" role="tabpanel " aria-labelledby="v-pills-messages-tab "> <button onclick="createNew() " class="btn btn-info">create new element </button></div>
+
+                            </div>
+
+                        </div>
 
 
-    <select id="cars" name="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
-      </select> 
-      <button onclick="cntDsp()">count and display</button>
-       <button onclick="createNew()">create new element </button>
-    <script>
-// function myfunction(){
-// var table=document.getElementById("mytable");
-// // var row= table.insertRow();
-// // row.insertCell(0);
-// // row.insertCell(1);
-// // row.insertCell(2);
-// }
+                    </div>
+                </div>
 
-// function cntDsp(){
-// var list=document.getElementsByTagName("option");
-// var listText=[""];
-// var count=0;
-// for(let i=0;i<list.length;i++){
-//     listText.push(list[i].innerHTML);
-//     count++
-// }
-// alert("There are "+count+" cars namely "+listText);
-// }
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="jumbotron">
+                    <h1 class="display-4">Moderate Exercises:</h1>
+                    <p>1.Write a Javascript program wherein you have button1 and button2. Button1 would have text inside displayed as “0” (zero) and button2 would have text inside displayed as “Neutral”. Whenever you click on button1, the text displayed
+                        inside button1 is then incremented by 1, and button2 will display “Fizz” if the number in button1 is divisible by 3, “Buzz” if the number in button1 is divisible by 5, and “FizzBuzz” if the number in button1 is divisible by both
+                        3 and 5.
+                    </p>
+                    <p>2.Write a Javascript program to manipulate 3 radio buttons. Have 2 buttons, checkAll and uncheckAll. Upon clicking checkAll, all 3 radio buttons must be checked. For uncheckAll, all 3 radio buttons must be unchecked. If for example,
+                        one radio button is checked among the three and then you click either checkAll or uncheckAll, same logic must go through.</p>
+                    <hr class="my-4">
+                    <div class="row">
 
-// function createNew(){
-// function newElement(element,id,text){
-// element=document.createElement("h1");
-// id=element.setAttribute("id","newID");
-// text=element.innerText="this a new element";
-// return element;
-// return id;
+                        <div class="col-sm-4">
+                            <div class="d-flex align-items-start">
+                                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home1" role="tab" aria-controls="v-pills-home" aria-selected="true">Exercise#1</a>
+                                    <a class="nav-link " id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile1" role="tab" aria-controls="v-pills-profile" aria-selected="false">Exercise#2</a>
 
-// }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-home1" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                    <button id="countBtn" class="btn btn-info" onclick="fizzBuzz()">0</button>
+                                    <button id="printer" class="btn btn-light ">NEUTRAL</button></div>
+                                <div class="tab-pane fade" id="v-pills-profile1" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="Check1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="Check2">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="Check3">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
 
-// document.body.appendChild(newElement());
-// }
-    </script>
+                                    <button id="printer" class="btn btn-primary " onclick="check()">Check All</button>
+                                    <button id="printer" class="btn btn-danger " onclick="uncheck()">Uncheck All</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div style="margin-top:100px " id="contain ">
+
+        </div>
+
+
+        <script src="main.js ">
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
 </body>
+</body>
+
 </html>
